@@ -7,7 +7,7 @@ public class PalindromeLibraries
     private int x;
     public static void main(String[] args)
     {
-        int r = 0;
+        char r;
         String u; 
         Scanner scan = new Scanner(System.in);
         do 
