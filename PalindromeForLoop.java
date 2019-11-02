@@ -13,23 +13,24 @@ public class PalindromeForLoop
         // initialise instance variables
         Scanner scan = new Scanner(System.in);  
         String u;  
-        char [] array, r_array;
+        char [] array, i;
        
-        int x = 0, y = 0, repeat = 0, length; 
+        int x = 0, y = 0, length; 
+        char r;
      do 
      {
          y = 0;
           u = keyInput.inString("Enter in a word"); 
           length = u.length(); 
           array = u.toCharArray();
-          r_array = u.toCharArray();
+          i = u.toCharArray();
            
             for(x = length - 1; x >= 0; x--) 
             {
-                r_array[y] = array[x]; 
+                i[y] = array[x]; 
                 y++;
             }
-            String reverse = new String(r_array);
+            String reverse = new String(i);
           
             if(u.equals(reverse)) 
             {  
@@ -39,8 +40,9 @@ public class PalindromeForLoop
             {
                 System.out.println("Not Palindrome");
             }
-            repeat = keyInput.inInt("Would you like to test another word?(1, 0)\n");
+            System.out.println("Would you like to enter another word?(Y/N)");
+            r = scan.next().charAt(0);
            } 
-           while(repeat == 1);
+           while(r == 'Y' || r == 'y');
     }
 }
