@@ -23,6 +23,10 @@ public class callPalindrome
                 break;
             }
             
+            case 3: 
+            callPalindrome3();
+            break;
+            
         }
     }
     
@@ -35,12 +39,12 @@ public class callPalindrome
     public static void callPalindrome2()
     {
         String[] arg = {""};
-        ForLoop.main(arg);
+        PalindromeForLoop.main(arg);
     }
     
     public static void callPalindrome3()
     {
         String[] arg = {""};
-        Libraries.main(arg);
+        PalindromeLibraries.main(arg);
     }
 }

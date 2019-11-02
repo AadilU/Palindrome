@@ -3,7 +3,7 @@ import chn.util.*;
 import apcslib.*; 
 import java.util.Random;
 
-public class ForLoop
+public class PalindromeForLoop
 {
     // instance variables - replace the example below with your own
     private int x;
@@ -19,7 +19,7 @@ public class ForLoop
      do 
      {
          y = 0;
-          u = keyInput.inString("Enter in a string"); 
+          u = keyInput.inString("Enter in a word"); 
           length = u.length(); 
           array = u.toCharArray();
           r_array = u.toCharArray();
