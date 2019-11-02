@@ -5,16 +5,16 @@ import java.lang.reflect.*;
 public class PalindromeLibraries
 {
     private int x;
-
     public static void main(String[] args)
     {
-        int repeat = 0;
-        String user; 
+        int r = 0;
+        String u; 
+        Scanner scan = new Scanner(System.in);
         do 
         {
-        user = keyInput.inString("Please enter a word to test palindrome\n");
-        String palindrome = new StringBuffer(user).reverse().toString(); 
-        if(palindrome.equals(user)) 
+        u = keyInput.inString("Please enter a word to test palindrome\n");
+        String palindrome = new StringBuffer(u).reverse().toString(); 
+        if(palindrome.equals(u)) 
             { 
                 System.out.println("Palindrome");
             } 
@@ -22,8 +22,9 @@ public class PalindromeLibraries
             {
                 System.out.println("Not Palindrome");
             } 
-            repeat = keyInput.inInt("Would you like to test another word?\n");
+            System.out.println("Would you like to test another word?(Y/N)\n");
+            r = scan.next().charAt(0);
         }
-        while(repeat != 0);
+        while(r == 'Y' || r == 'y');
     }
 }
