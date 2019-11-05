@@ -13,6 +13,8 @@ public class PalindromeLibraries
         do 
         {
         u = keyInput.inString("Please enter a word to test palindrome\n");
+        u = u.replaceAll("[\\W]", "");
+        u = u.toLowerCase();
         String palindrome = new StringBuffer(u).reverse().toString(); 
         if(palindrome.equals(u)) 
             { 
