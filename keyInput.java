@@ -12,7 +12,7 @@ class keyInput {
   //*******************************
   //Method to display the user's prompt string
   public static void printPrompt(String prompt) {
-    System.out.print(prompt + " ");
+    System.out.print(prompt);
     System.out.flush();
   }
 

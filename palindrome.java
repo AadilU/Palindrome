@@ -1,50 +1,54 @@
 import java.util.*;
 public class palindrome
 {
+    public static int i;
+    public static int t;
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
         String word;
-        int i = 0;
-        int t = 0;
         char r;
         
         do
         {
         i = 0;
         t = 0;
-        System.out.println("Enter a word");
-        word = scan.next();
-        boolean answer = test1(word, i, t);
+        word = keyInput.inString("Enter a word\n");
+        word = word.toLowerCase();
+        word = word.replaceAll("[\\W]", "");
+        //word = word.replaceAll("[\\W]", "");
+        boolean answer = test1(word);
         
             if(answer == true)
             {
-                System.out.println("true");
+                keyInput.printPrompt("true\n");
             }
             else
-                System.out.println("false");
-        System.out.println("Would you like to try another word?(Y/N)");
-        r = scan.next().charAt(0);
+                keyInput.printPrompt("false\n"); 
+        r = keyInput.inString("Enter a word(Y/N)\n").charAt(0);
         }
         while(r == 'y' || r == 'Y');
     }
     
-    public static boolean test1(String w, int ch, int ti)
+    public static boolean test1(String w)
     {
-        if(ch <= (w.length() - 1))
+        if(i <= (w.length() - 1))
         {
-            if(w.charAt(ch) == w.charAt(((w.length() - 1) - ch)))
+            if(w.charAt(i) == w.charAt(((w.length() - 1) - i)))
             {
-                ch++;
-                ti++;
-                test1(w, ch, ti);
+                i++;
+                t++;
+                test1(w);
             }
         }
-        if(ti == 1)
+        if(t == w.length())
         {
             return true;
         }
         else
+        if (t != w.length())
             return false;
+            else
+                return true;
     }
 }

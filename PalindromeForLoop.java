@@ -21,6 +21,8 @@ public class PalindromeForLoop
      {
          y = 0;
           u = keyInput.inString("Enter in a word"); 
+          u = u.replaceAll("[\\W]", "");
+          u = u.toLowerCase();
           length = u.length(); 
           array = u.toCharArray();
           i = u.toCharArray();

@@ -4,10 +4,9 @@ public class callPalindrome
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Choose palindrome method(1 - 3):\n1. Recursion\n2. For loops\n3. Libraries");
         int labNum;
         
-        labNum = scan.nextInt();
+        labNum = keyInput.inInt("Choose palindrome method(1 - 3):\n1. Recursion\n2. For loops\n3. Libraries\n");
         
         switch(labNum)
         {
